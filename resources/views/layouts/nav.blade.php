@@ -61,10 +61,10 @@
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
                 <div class="d-none d-lg-block">
     <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./presentation.html">
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('proveedores.inicio')}}">
           <div class="w-100 d-flex align-items-center justify-content-between">
             <div>
-              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Proveedor</h6>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Proveedores</h6>
             </div>
             <img src="{{asset('/assets/img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
           </div>
@@ -73,17 +73,17 @@
           <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('proveedores.inicio')}}">
             Inicio Proveedor
           </a>
-          <a class="dropdown-item ps-3 border-radius-md mb-1" href="">
+          <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('proveedor.registro')}}">
             Registro Proveedor
           </a>
         </div>
       </li>
 
       <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./presentation.html">
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('productos.inicio')}}">
           <div class="w-100 d-flex align-items-center justify-content-between">
             <div>
-              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Producto</h6>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Productos</h6>
             </div>
             <img src="{{asset('/assets/img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
           </div>
@@ -99,10 +99,10 @@
       </li>
 
       <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-        <a class="dropdown-item py-2 ps-3 border-radius-md" href="">
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('clientes.inicio')}}">
           <div class="w-100 d-flex align-items-center justify-content-between">
             <div>
-              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Cliente</h6>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Clientes</h6>
             </div>
             <img src="{{asset('/assets/img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
           </div>
@@ -118,10 +118,10 @@
       </li>
 
       <li class="nav-item dropdown dropdown-hover dropdown-subitem">
-        <a class="dropdown-item py-2 ps-3 border-radius-md" href="./presentation.html">
+        <a class="dropdown-item py-2 ps-3 border-radius-md" href="{{route('usuarios.inicio')}}">
           <div class="w-100 d-flex align-items-center justify-content-between">
             <div>
-              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Usuario</h6>
+              <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Usuarios</h6>
             </div>
             <img src="{{asset('/assets/img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
           </div>

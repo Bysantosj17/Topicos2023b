@@ -1,0 +1,43 @@
+.botones{
+    background-color: white;
+    color: black;
+    border: 5px solid #04AA6D;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.botones {
+    transition-duration: 0.4s;
+}
+
+.botones:hover {
+    background-color: #04AA6D; /* Green */
+    color: white;
+}
+
+.botones_eliminar{
+    background-color: white;
+    color: black;
+    border: 5px solid #aa0404;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.botones_eliminar {
+    transition-duration: 0.4s;
+}
+
+.botones_eliminar:hover {
+    background-color: #aa0404; /* Green */
+    color: white;
+}

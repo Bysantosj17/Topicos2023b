@@ -15,7 +15,7 @@
     <h6>Direccion: </h6><p><strong>{{ $proveedor->direccion}}</strong></p>
     <h6>Descripcion: </h6><p><strong>{{ $proveedor->descripcion}}</strong></p>
 
-    <h4><a href="#">Editar proveedor</a></h4>
+    <h4><a href="{{route('proveedor.registro')}}">Editar proveedor</a></h4>
     <h3><a href="{{route('proveedores.inicio')}}">Volver a los proveedor</a></h3>
 
 </div>
