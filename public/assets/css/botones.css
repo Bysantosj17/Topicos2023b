@@ -3,11 +3,11 @@
     color: black;
     border: 5px solid #04AA6D;
     color: black;
-    padding: 15px 32px;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 25px;
 }
 
@@ -25,11 +25,11 @@
     color: black;
     border: 5px solid #aa0404;
     color: black;
-    padding: 15px 32px;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 25px;
 }
 
@@ -41,3 +41,16 @@
     background-color: #aa0404; /* Green */
     color: white;
 }
+
+table, th, td{
+    padding-top: 0px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 2px solid;
+    border: 4px;
+    border-radius: 25px;
+    color: #04AA6D;
+}
+
+

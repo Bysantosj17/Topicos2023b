@@ -5,7 +5,7 @@
 <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
     <h1>Registro proveedor:</h1>
     <fieldset>
-        <form action="" method="POST">
+        <form action="{{route('proveedores.almacenar_registro')}}" method="POST">
 
             @csrf
 
@@ -48,10 +48,12 @@
                 Descripcion:</br>
                 <textarea type="text" name="descripcion">
                 </textarea>
+
             </label></br>
             <button type="submit">Registrar proveedor</button>
         </form>
     </fieldset>
 </div>
+
 @endsection
 

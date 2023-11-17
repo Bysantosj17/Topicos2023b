@@ -73,7 +73,7 @@
           <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('proveedores.inicio')}}">
             Inicio Proveedor
           </a>
-          <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('proveedor.registro')}}">
+          <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('proveedores.registro')}}">
             Registro Proveedor
           </a>
         </div>

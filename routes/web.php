@@ -51,7 +51,14 @@ Route::controller(ProductosController::class)->group(function(){
 Route::controller(ProveedoresController::class)->group(function(){
     Route::get('proveedores', 'InicioProveedores')->name('proveedores.inicio');
     Route::get('proveedores/detalle_proveedor/{proveedor}', 'DetalleProveedor')->name('proveedores.detalle');
-    Route::get('proveedores/registro', 'RegistroProveedor')->name('proveedor.registro');
+    Route::get('proveedores/registro', 'RegistroProveedor')->name('proveedores.registro');
+    Route::get('proveedores/{proveedor}/editar_proveedor', 'EditarProveedor')->name('proveedores.editar');
+
+    Route::post('proveedores', 'AlamcenarRegistro')->name('proveedores.almacenar_registro');
+
+    Route::put('proveedores/{proveedor}', 'ActualizarProveedor')->name('proveedores.actualizar');
+
+    Route::delete('provedores/{proveedor}', 'EliminarProveedor')->name('proveedores.eliminar');
 });
 
 Route::controller(UsuariosController::class)->group(function(){

@@ -7,16 +7,17 @@
 
     <h1><center>Bienvenido a la vista de detalle proveedor</center></h1>
     </br>
-    <h2>Proveedor: {{$proveedor->nombres, $proveedor->ap_paterno, $proveedor->ap_materno }}</h2>
+    <h2>Proveedor: {{$proveedor->nombres}} {{$proveedor->ap_paterno}} {{$proveedor->ap_materno}}</h2>
+    <h2>Compañia: {{$proveedor->compania}}</h2>
 
     <h6>Telefono:</h6><p><strong>{{ $proveedor->telefono}}</strong></p>
     <h6>Email: </h6><p><Strong>{{ $proveedor->email}}</Strong></p>
-    <h6>Compañia: </h6><p><strong>{{ $proveedor->compania}}</strong></p>
     <h6>Direccion: </h6><p><strong>{{ $proveedor->direccion}}</strong></p>
     <h6>Descripcion: </h6><p><strong>{{ $proveedor->descripcion}}</strong></p>
 
-    <h4><a href="{{route('proveedor.registro')}}">Editar proveedor</a></h4>
-    <h3><a href="{{route('proveedores.inicio')}}">Volver a los proveedor</a></h3>
+    <h4><a href="{{route('proveedores.editar', $proveedor)}}">Editar proveedor</a></h4>
+    <h4><a href="{{route('proveedores.registro')}}">Registrar un nuevo proveedor</a></h4>
+    <h3><a href="{{route('proveedores.inicio')}}">Volver a los proveedores</a></h3>
 
 </div>
 
