@@ -17,7 +17,7 @@
                         @csrf
                         @method('delete')
                         <button class="botones_eliminar" type="submit"
-                        onclick="return confirm('Estás seguro que deseas eliminar el proveedor: {{$cliente->nombres}} {{$cliente->ap_paterno}} {{$cliente->ap_materno}}?');">Eliminar
+                        onclick="return confirm('Estás seguro que deseas eliminar el cliente: {{$cliente->nombres}} {{$cliente->ap_paterno}} {{$cliente->ap_materno}}?');">Eliminar
                         </button>
                     </form>
                 </td>
@@ -26,11 +26,11 @@
                 <td></td>
             </tr>
             @endforeach
-    </table>
+        </table>
     </div>
     <br><br>
     <div class="card-body">
         {{$clientes->links()}}
-    </div>
+</div>
 
 @endsection

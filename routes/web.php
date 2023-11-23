@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\UserController;
@@ -20,6 +21,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::controller(InicioController::class)->group(function(){
+    Route::get('inicio', 'Inicio')->name('inicio.inicio');
 });
 
 Route::controller(ClientesController::class)->group(function(){
@@ -63,6 +68,8 @@ Route::controller(ProveedoresController::class)->group(function(){
 
 Route::controller(UsuariosController::class)->group(function(){
     Route::get('usuarios', 'InicioUsuarios')->name('usuarios.inicio');
+    Route::get('usuarios/detalle_usuario/{usuario}', 'DetalleUsuario')->name('usuarios.detalle');
+    Route::get('usuarios/registro', 'RegistroUsuarios')->name('usuarios.registro');
 });
 
 Route::middleware([
@@ -71,6 +78,6 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('Inicio.inicio');
     })->name('dashboard');
 });

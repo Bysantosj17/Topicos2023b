@@ -13,4 +13,12 @@ class UsuariosController extends Controller
 
         return view('usuarios.inicio_usuarios', compact('usuarios'));
     }
+
+    public function RegistroUsuarios(){
+        return view('usuarios.registro_usuario');
+    }
+
+    public function DetalleUsuario(User $usuario){
+        return view('usuarios.detalle_usuario', compact('usuario'));
+    }
 }

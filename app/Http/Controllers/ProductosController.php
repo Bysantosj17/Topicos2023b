@@ -10,7 +10,7 @@ class ProductosController extends Controller
 {
     public function InicioProductos(){
 
-        $productos = Producto::orderBy('id', 'desc')->paginate();
+        $productos = Producto::orderBy('id', 'desc')->paginate(10);
 
         return view('productos.inicio_productos', compact('productos'));
     }
