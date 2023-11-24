@@ -53,4 +53,31 @@ table, th, td{
     color: #04AA6D;
 }
 
+.boton_salir{
+    background-color: EED7E8;
+    color: black;
+    border: 5px solid #aa0404;
+    color: black;
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 25px;
+}
 
+.boton_salir{
+    transition-duration: 0.4s;
+}
+
+.boton_salir:hover{
+    background-color: #aa0404; /* Green */
+    color: white;
+}
+
+.usuario{
+    color:black;
+    font-size: 20px;
+    padding: 5px 20px;
+    padding-top: 10px;
+}

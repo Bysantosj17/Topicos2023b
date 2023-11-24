@@ -1,7 +1,6 @@
 @extends('layouts.main')
 @section('content')
 <div class="main-panel">
-    @include('layouts.nav')
     <div class="content">
         <header class="header-2">
             <div class="page-header min-vh-75 relative" style="background-image: url('/assets/img/bg2.jpg')">
@@ -18,6 +17,5 @@
           </header>
         @yield('content-dashboard')
     </div>
-    @include('layouts.footer')
 </div>
 @endsection

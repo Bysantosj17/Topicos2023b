@@ -3,8 +3,11 @@
     <nav class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
     <div class="container-fluid px-0">
         <a class="navbar-brand font-weight-bolder ms-sm-3" href="{{route("inicio.inicio")}}">
-        SANTOS URIEL BARBOSA SANDOVAL
+        CLICKVENTAS
         </a>
+        <h3 class="usuario">
+            Usuario: {{ Auth::user()->name }}
+        </h3>
         <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon mt-2">
             <span class="navbar-toggler-bar bar1"></span>
@@ -15,11 +18,6 @@
         <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
         <ul class="navbar-nav navbar-nav-hover ms-auto">
             <li class="nav-item dropdown dropdown-hover mx-2">
-            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
-                Pages
-                <img src="{{asset('/assets/img/down-arrow-dark.svg')}}" alt="down-arrow" class="arrow ms-auto ms-md-2">
-            </a>
             <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3" aria-labelledby="dropdownMenuPages">
                 <div class="d-none d-lg-block">
     <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
@@ -69,7 +67,7 @@
             <img src="{{asset('/assets/img/down-arrow.svg')}}" alt="down-arrow" class="arrow">
           </div>
         </a>
-        <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+        <div class="dropdown-menu mt-0 py-3 px-2">
           <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('proveedores.inicio')}}">
             Inicio Proveedor
           </a>
@@ -130,7 +128,7 @@
           <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('usuarios.inicio')}}">
             Inicio Usuario
           </a>
-          <a class="dropdown-item ps-3 border-radius-md mb-1" href="./sections/attention-catchers/modals.html">
+          <a class="dropdown-item ps-3 border-radius-md mb-1" href="{{route('usuarios.registro')}}">
             Registro Usuario
           </a>
         </div>
@@ -253,12 +251,12 @@
     </div>
               </ul>
             </li>
-            <li class="nav-item ms-lg-auto">
-              <a class="nav-link nav-link-icon me-2" href="https://github.com/creativetimofficial/material-kit" target="_blank">
-                <i class="fa fa-github me-1"></i>
-                <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Star us on Github">Github</p>
-              </a>
-            </li>
+            <form method="POST" action="{{route('logout')}}" x-data>
+                @csrf
+                <button class="boton_salir" type="submit">
+                    {{ __('Salir') }}
+                </button>
+            </form>
 
 
           </ul>

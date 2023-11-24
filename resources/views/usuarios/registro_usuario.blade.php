@@ -1,9 +1,9 @@
-@extends('layouts.dashboard')
-@section('title', 'Registro cliente')
-@section('subtitulo', 'REGISTRO CLIENTE')
+@extends('layouts.dashboard_sin_nav')
+@section('title', 'Registro usuario')
+@section('subtitulo', 'REGISTRO USUARIO')
 @section('content-dashboard')
 <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-    <h1>Registro Cliente:</h1>
+    <h1>Registro usuario:</h1>
     <fieldset>
         <form method="POST" action="{{ route('register') }}">
             @csrf
@@ -56,5 +56,6 @@
             </div>
         </form>
     </fieldset>
+    <h4 class="boton_iniciar_sesion"><a href="{{route('login')}}">Iniciar sesion -></a></h4>
 </div>
 @endsection

@@ -12,7 +12,7 @@
                 <td><h5><a href="{{route('usuarios.detalle', $usuario)}}"> {{$usuario->name}} </a></td></h5>
                 <td><a class="botones" href="#">Editar</a></td>
                 <td>
-                    <form action="#" method="POST">
+                    <form action="{{route('usuarios.eliminar', $usuario)}}" method="POST">
                         @csrf
                         @method('delete')
                         <button class="botones_eliminar" type="submit"
