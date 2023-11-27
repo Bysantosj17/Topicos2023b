@@ -68,6 +68,9 @@ Route::controller(ProveedoresController::class)->group(function(){
 
 Route::controller(UsuariosController::class)->group(function(){
     Route::get('usuarios', 'InicioUsuarios')->name('usuarios.inicio');
+
+
+
     Route::get('usuarios/detalle_usuario/{usuario}', 'DetalleUsuario')->name('usuarios.detalle');
     Route::get('usuarios/registro', 'RegistroUsuarios')->name('usuarios.registro');
     Route::get('usuarios/{usuario}/editar_usuario', 'EditarUsuario')->name('usuarios.editar');
@@ -75,6 +78,7 @@ Route::controller(UsuariosController::class)->group(function(){
     Route::put('usuarios/{usuario}', 'ActualizarUsuario')->name('usuarios.actualizar');
 
     Route::delete('usuarios/{usuario}', 'EliminarUsuario')->name('usuarios.eliminar');
+
 });
 
 Route::middleware([

@@ -10,45 +10,87 @@
             @csrf
 
             <label>
-                Nombres:</br>
+                <strong>Nombres:</strong></br>
                 <input type="text" name="nombres">
             </label>
 
+            @error('nombres')
+                <br>
+                <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
             <label>
-                Apellido paterno:</br>
+                <strong>Apellido paterno:</strong></br>
                 <input type="text" name="ap_paterno">
             </label>
 
+            @error('ap_paterno')
+                <br>
+                    <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
             <label>
-                Apellido materno:</br>
+                <strong>Apellido materno:</strong></br>
                 <input type="text" name="ap_materno">
             </label>
 
+            @error('ap_materno')
+                <br>
+                    <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
             <label>
-                Telefono:</br>
+                <strong>Telefono:</strong></br>
                 <input type="number" name="telefono" min="10">
             </label>
             </br>
             <label>
-                Correo electronico:</br>
+                <strong>Correo electronico:</strong></br>
                 <input type="email" name="email">
             </label>
 
+            @error('telefono')
+                <br>
+                    <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
             <label>
-                Direccion;</br>
+                <Strong>Direccion:</Strong></br>
                 <input type="text" name="direccion">
             </label>
 
+            @error('direccion')
+                <br>
+                    <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
             <label>
-                RFC:</br>
+                <strong>RFC:</strong></br>
                 <input type="text" name="rfc">
             </label>
 
+            @error('rfc')
+                <br>
+                    <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
             <label>
-                Descripcion:</br>
+                <strong>Descripcion:</strong></br>
                 <input type="text" name="descripcion">
-            </label></br>
-            <button type="submit">Registrar Cliente</button>
+            </label></br><br>
+
+            @error('descripcion')
+                <br>
+                    <span>*{{ $message}}</span>
+                <br>
+            @enderror
+            <button class="botones" type="submit">Registrar Cliente</button>
         </form>
     </fieldset>
 </div>

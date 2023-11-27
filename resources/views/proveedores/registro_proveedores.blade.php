@@ -50,7 +50,7 @@
                 </textarea>
 
             </label></br>
-            <button type="submit">Registrar proveedor</button>
+            <button class="botones" type="submit">Registrar proveedor</button>
         </form>
     </fieldset>
 </div>

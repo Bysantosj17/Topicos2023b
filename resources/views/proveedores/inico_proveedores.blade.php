@@ -4,7 +4,9 @@
 @section('content-dashboard')
 <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
     <h1>Inicio proveedor</h1>
-    <h2><a href="{{route('proveedores.registro')}}">Crear proveedor</a></h2>
+    <h2><a href="{{route('proveedores.registro')}}">Registrar proveedor
+        <img src="assets/img/iconos/circulo-de-flecha.png" alt="icono_1">
+        </a></h2>
     <div class="tabla_resultados">
         <table>
             @foreach ($proveedores as $proveedor)

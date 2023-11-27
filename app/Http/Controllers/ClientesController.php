@@ -24,6 +24,18 @@ class ClientesController extends Controller
     }
 
     public function AlmacenarRegistro(Request $request){
+
+        $request->validate([
+            'nombres' => 'required',
+            'ap_paterno' => 'required',
+            'ap_materno' => 'required',
+            'telefono' => 'required',
+            'email' => 'required',
+            'rfc' => 'required',
+            'direccion' => 'required',
+            'descripcion' => 'required'
+        ]);
+
         $cliente = new Cliente();
 
         $cliente->nombres = $request->nombres;
