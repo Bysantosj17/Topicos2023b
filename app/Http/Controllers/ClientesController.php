@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ClientesRequest;
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 
@@ -23,18 +24,7 @@ class ClientesController extends Controller
         return view('clientes.detalle_cliente', compact('cliente'));
     }
 
-    public function AlmacenarRegistro(Request $request){
-
-        $request->validate([
-            'nombres' => 'required',
-            'ap_paterno' => 'required',
-            'ap_materno' => 'required',
-            'telefono' => 'required',
-            'email' => 'required',
-            'rfc' => 'required',
-            'direccion' => 'required',
-            'descripcion' => 'required'
-        ]);
+    public function AlmacenarRegistro(ClientesRequest $request){
 
         $cliente = new Cliente();
 
@@ -57,6 +47,18 @@ class ClientesController extends Controller
     }
 
     public function ActualizarCliente(Request $request, Cliente $cliente){
+
+        $request->validate([
+            'nombres' => 'required|min:3',
+            'ap_paterno' => 'required',
+            'ap_materno' => 'required',
+            'telefono' => 'required',
+            'email' => 'required',
+            'rfc' => 'required',
+            'direccion' => 'required',
+            'descripcion' => 'required'
+        ]);
+
         $cliente->nombres = $request->nombres;
         $cliente->ap_paterno = $request->ap_paterno;
         $cliente->ap_materno = $request->ap_materno;

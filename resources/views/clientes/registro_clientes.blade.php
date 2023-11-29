@@ -11,7 +11,7 @@
 
             <label>
                 <strong>Nombres:</strong></br>
-                <input type="text" name="nombres">
+                <input type="text" name="nombres" value="{{old('nombres')}}">
             </label>
 
             @error('nombres')
@@ -22,7 +22,7 @@
 
             <label>
                 <strong>Apellido paterno:</strong></br>
-                <input type="text" name="ap_paterno">
+                <input type="text" name="ap_paterno" value="{{old('ap_paterno')}}">
             </label>
 
             @error('ap_paterno')
@@ -33,7 +33,7 @@
 
             <label>
                 <strong>Apellido materno:</strong></br>
-                <input type="text" name="ap_materno">
+                <input type="text" name="ap_materno" value="{{old('ap_materno')}}">
             </label>
 
             @error('ap_materno')
@@ -44,12 +44,7 @@
 
             <label>
                 <strong>Telefono:</strong></br>
-                <input type="number" name="telefono" min="10">
-            </label>
-            </br>
-            <label>
-                <strong>Correo electronico:</strong></br>
-                <input type="email" name="email">
+                <input type="number" name="telefono" min="10" value="{{old('telefono')}}">
             </label>
 
             @error('telefono')
@@ -58,9 +53,21 @@
                 <br>
             @enderror
 
+            </br>
+            <label>
+                <strong>Correo electronico:</strong></br>
+                <input type="email" name="email" value="{{old('email')}}">
+            </label>
+
+            @error('email')
+                <br>
+                    <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
             <label>
                 <Strong>Direccion:</Strong></br>
-                <input type="text" name="direccion">
+                <input type="text" name="direccion" value="{{old('direccion')}}">
             </label>
 
             @error('direccion')
@@ -71,7 +78,7 @@
 
             <label>
                 <strong>RFC:</strong></br>
-                <input type="text" name="rfc">
+                <input type="text" name="rfc" value="{{old('rfc')}}">
             </label>
 
             @error('rfc')
@@ -79,17 +86,20 @@
                     <span>*{{ $message}}</span>
                 <br>
             @enderror
+            <br>
 
             <label>
                 <strong>Descripcion:</strong></br>
-                <input type="text" name="descripcion">
-            </label></br><br>
+                <textarea type="text" name="descripcion" value="{{old('descripcion')}}"> </textarea>
+            </label>
 
             @error('descripcion')
                 <br>
                     <span>*{{ $message}}</span>
                 <br>
             @enderror
+
+            <br><br>
             <button class="botones" type="submit">Registrar Cliente</button>
         </form>
     </fieldset>
