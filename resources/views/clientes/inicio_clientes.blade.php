@@ -9,7 +9,7 @@
         <table>
             @foreach ($clientes as $cliente)
             <tr>
-                <td><h5><a href="{{route('clientes.detalle', $cliente)}}">
+                <td><h5><a href="{{route('clientes.detalle', $cliente->slug)}}">
                     {{$cliente->nombres}} {{$cliente->ap_paterno}} {{$cliente->ap_materno}}</a></td></h5>
                 <td><a class="botones" href="{{route('clientes.editar', $cliente->id)}}">Editar</a></td>
                 <td>

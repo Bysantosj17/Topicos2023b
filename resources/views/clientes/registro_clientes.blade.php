@@ -10,6 +10,17 @@
             @csrf
 
             <label>
+                <strong>Nombre usuario:</strong></br>
+                <input type="text" name="slug" value="{{old('slug')}}">
+            </label>
+
+            @error('slug')
+                <br>
+                <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
+            <label>
                 <strong>Nombres:</strong></br>
                 <input type="text" name="nombres" value="{{old('nombres')}}">
             </label>

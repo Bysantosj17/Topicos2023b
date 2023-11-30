@@ -26,7 +26,7 @@ class ClientesController extends Controller
 
     public function AlmacenarRegistro(ClientesRequest $request){
 
-        $cliente = new Cliente();
+        /*$cliente = new Cliente();
 
         $cliente->nombres = $request->nombres;
         $cliente->ap_paterno = $request->ap_paterno;
@@ -37,7 +37,20 @@ class ClientesController extends Controller
         $cliente->direccion = $request->direccion;
         $cliente->descripcion = $request->descripcion;
 
-        $cliente->save();
+        $cliente->save(); */
+
+        /*$cliente = Cliente::create([
+            'nombre' => $request->nombres,
+            'ap_paterno' => $request->ap_paterno,
+            'ap_materno' => $request->ap_materno,
+            'telefono' => $request->telefono,
+            'email' => $request->email,
+            'rfc' => $request->rfc,
+            'direccion' => $request->direccion,
+            'descripcion'  => $request->descripcion
+        ]); */
+
+        $cliente = Cliente::create($request->all());
 
         return redirect()->route('clientes.detalle', $cliente);
     }
@@ -46,20 +59,9 @@ class ClientesController extends Controller
         return view ('clientes.actualizar_cliente', compact('cliente'));
     }
 
-    public function ActualizarCliente(Request $request, Cliente $cliente){
+    public function ActualizarCliente(ClientesRequest $request, Cliente $cliente){
 
-        $request->validate([
-            'nombres' => 'required|min:3',
-            'ap_paterno' => 'required',
-            'ap_materno' => 'required',
-            'telefono' => 'required',
-            'email' => 'required',
-            'rfc' => 'required',
-            'direccion' => 'required',
-            'descripcion' => 'required'
-        ]);
-
-        $cliente->nombres = $request->nombres;
+        /*$cliente->nombres = $request->nombres;
         $cliente->ap_paterno = $request->ap_paterno;
         $cliente->ap_materno = $request->ap_materno;
         $cliente->telefono = $request->telefono;
@@ -68,7 +70,9 @@ class ClientesController extends Controller
         $cliente->direccion = $request->direccion;
         $cliente->descripcion = $request->descripcion;
 
-        $cliente->save();
+        $cliente->save(); */
+
+        $cliente->update($request->all());
 
         return redirect()->route('clientes.detalle', $cliente);
     }

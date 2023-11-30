@@ -27,6 +27,7 @@ class ClienteFactory extends Factory
     {
         return [
             'nombres' => $this->faker->sentence(),
+            'slug' => $this->faker->slug(),
             'ap_paterno' => $this->faker->sentence(),
             'ap_materno' => $this->faker->sentence(),
             'telefono' => $this->faker->numberBetween(),
