@@ -24,6 +24,18 @@
             @enderror
 
             <label>
+                Nombres usuario:</br>
+                <input type="text" name="slug" value="{{old('slug', $cliente->slug) }}">
+            </label>
+
+
+            @error('slug')
+                <br>
+                <span>*{{ $message}}</span>
+                <br>
+            @enderror
+
+            <label>
                 Apellido paterno:</br>
                 <input type="text" name="ap_paterno" value='{{old('ap_paterno',$cliente->ap_paterno)}}'>
             </label>

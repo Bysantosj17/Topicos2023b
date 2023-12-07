@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Cliente;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ClientesRequest extends FormRequest
@@ -29,7 +30,8 @@ class ClientesRequest extends FormRequest
             'email' => 'required',
             'rfc' => 'required',
             'direccion' => 'required',
-            'descripcion' => 'required'
+            'descripcion' => 'required',
+            'slug' => 'required|min:5|unique:clientes,slug,cliente=id',
         ];
     }
 
@@ -40,6 +42,7 @@ class ClientesRequest extends FormRequest
             'ap_materno.required' => 'llenar el campo apellido materno',
             'ap_paterno.required' => 'llenar el campo apellido paterno',
             'descripcion.required' => 'La descripcion es obligatoria',
+            'slug.required' => 'El campo nombre usario es obligatorio',
 
 
         ];

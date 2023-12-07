@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\ProveedoresController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuariosController;
+use App\Mail\ContactanosMailable;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,9 +71,6 @@ Route::controller(ProveedoresController::class)->group(function(){
 
 Route::controller(UsuariosController::class)->group(function(){
     Route::get('usuarios', 'InicioUsuarios')->name('usuarios.inicio');
-
-
-
     Route::get('usuarios/detalle_usuario/{usuario}', 'DetalleUsuario')->name('usuarios.detalle');
     Route::get('usuarios/registro', 'RegistroUsuarios')->name('usuarios.registro');
     Route::get('usuarios/{usuario}/editar_usuario', 'EditarUsuario')->name('usuarios.editar');
@@ -80,6 +80,20 @@ Route::controller(UsuariosController::class)->group(function(){
     Route::delete('usuarios/{usuario}', 'EliminarUsuario')->name('usuarios.eliminar');
 
 });
+
+Route::controller(ContactanosController::class)->group(function(){
+    Route::get('contactanos', '')->name('contactanos.inicio');
+
+    Route::post('contactanos/registro', '')->name('contactanos.registro');
+});
+
+/*Route::get('contactanos', function () {
+
+    Mail::to('santosandoval163@gmail.com')->send(new ContactanosMailable);
+
+    return "Mensaje enviado";
+
+})->name('contactanos');*/
 
 Route::middleware([
     'auth:sanctum',

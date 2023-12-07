@@ -11,9 +11,9 @@
             <tr>
                 <td><h5><a href="{{route('clientes.detalle', $cliente->slug)}}">
                     {{$cliente->nombres}} {{$cliente->ap_paterno}} {{$cliente->ap_materno}}</a></td></h5>
-                <td><a class="botones" href="{{route('clientes.editar', $cliente->id)}}">Editar</a></td>
+                <td><a class="botones" href="{{route('clientes.editar', $cliente->slug)}}">Editar</a></td>
                 <td>
-                    <form action="{{route('clientes.eliminar', $cliente)}}" method="POST">
+                    <form action="{{route('clientes.eliminar', $cliente->slug)}}" method="POST">
                         @csrf
                         @method('delete')
                         <button class="botones_eliminar" type="submit"
