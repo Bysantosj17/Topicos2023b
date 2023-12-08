@@ -170,7 +170,7 @@
 
                                         <li class="nav-item dropdown dropdown-hover dropdown-subitem">
                                             <a class="dropdown-item py-2 ps-3 border-radius-md"
-                                                href="{{ route('usuarios.inicio') }}">
+                                                href="{{ route('contactanos.inicio') }}">
                                                 <div class="w-100 d-flex align-items-center justify-content-between">
                                                     <div>
                                                         <h6

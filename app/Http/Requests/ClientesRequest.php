@@ -43,8 +43,6 @@ class ClientesRequest extends FormRequest
             'ap_paterno.required' => 'llenar el campo apellido paterno',
             'descripcion.required' => 'La descripcion es obligatoria',
             'slug.required' => 'El campo nombre usario es obligatorio',
-
-
         ];
     }
 

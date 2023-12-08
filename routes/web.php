@@ -82,9 +82,9 @@ Route::controller(UsuariosController::class)->group(function(){
 });
 
 Route::controller(ContactanosController::class)->group(function(){
-    Route::get('contactanos', '')->name('contactanos.inicio');
+    Route::get('contactanos', 'InicioContactanos')->name('contactanos.inicio');
 
-    Route::post('contactanos/registro', '')->name('contactanos.registro');
+    Route::post('contactanos/registro', 'RegistroContactanos')->name('contactanos.registro');
 });
 
 /*Route::get('contactanos', function () {
