@@ -4,9 +4,16 @@
 @section('content-dashboard')
 <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
     <h1>Inicio</h1>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <x-alert type='info'>
 
-        
+        <x-slot name='title'>
+            Este es el titulo desde el slot
+        </x-slot>
+
+        <p>Esto es un texto de alerta de prueba</p>
+    </x-alert>
+    <br>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row g-0">
